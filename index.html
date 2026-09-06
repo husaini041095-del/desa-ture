@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Desa Ture - Portal Informasi Desa</title>
+
+<style>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f6f8;
+    color: #222;
+}
+
+header {
+    background: #087f3e;
+    color: white;
+}
+
+.top {
+    max-width: 1100px;
+    margin: auto;
+    padding: 22px 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo {
+    width: 60px;
+    height: 60px;
+    background: white;
+    color: #087f3e;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.judul h1 {
+    font-size: 28px;
+}
+
+.judul p {
+    margin-top: 5px;
+    font-size: 14px;
+}
+
+nav {
+    background: #066b35;
+}
+
+.navbar {
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 14px 16px;
+    display: block;
+    font-size: 14px;
+}
+
+nav a:hover {
+    background: #05582c;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 25px auto;
+    padding: 0 15px;
+}
+
+.hero {
+    background: white;
+    padding: 35px 25px;
+    border-radius: 10px;
+    margin-bottom: 25px;
+    border-left: 6px solid #087f3e;
+}
+
+.hero h2 {
+    color: #087f3e;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    line-height: 1.6;
+    color: #555;
+}
+
+.section-title {
+    font-size: 23px;
+    color: #087f3e;
+    margin-bottom: 15px;
+}
+
+.berita {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,.08);
+}
+
+.foto {
+    height: 160px;
+    background: linear-gradient(135deg,#087f3e,#38a169);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 45px;
+}
+
+.card-content {
+    padding: 16px;
+}
+
+.tanggal {
+    font-size: 12px;
+    color: #777;
+    margin-bottom: 8px;
+}
+
+.card h3 {
+    font-size: 17px;
+    line-height: 1.4;
+    margin-bottom: 8px;
+}
+
+.card p {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.info {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.box {
+    background: white;
+    padding: 22px;
+    border-radius: 10px;
+}
+
+.box h3 {
+    color: #087f3e;
+    margin-bottom: 12px;
+}
+
+.box ul {
+    list-style: none;
+}
+
+.box li {
+    padding: 9px 0;
+    border-bottom: 1px solid #eee;
+}
+
+footer {
+    margin-top: 40px;
+    background: #07552d;
+    color: white;
+    text-align: center;
+    padding: 25px 15px;
+    line-height: 1.7;
+}
+
+@media (max-width: 750px) {
+    .judul h1 {
+        font-size: 22px;
+    }
+
+    .navbar {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    nav a {
+        text-align: center;
+        border-bottom: 1px solid rgba(255,255,255,.1);
+    }
+
+    .berita {
+        grid-template-columns: 1fr;
+    }
+
+    .info {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h2 {
+        font-size: 25px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="top">
+        <div class="logo">DT</div>
+
+        <div class="judul">
+            <h1>DESA TURE</h1>
+            <p>Portal Informasi Desa Ture</p>
+        </div>
+    </div>
+
+    <nav>
+        <div class="navbar">
+            <a href="#">Beranda</a>
+            <a href="#">Berita Desa</a>
+            <a href="#">Pemerintahan</a>
+            <a href="#">Pengumuman</a>
+            <a href="#">Pembangunan</a>
+            <a href="#">Pertanian</a>
+            <a href="#">Galeri</a>
+            <a href="#">Kontak</a>
+        </div>
+    </nav>
+</header>
+
+<main class="container">
+
+    <section class="hero">
+        <h2>Selamat Datang di Desa Ture</h2>
+        <p>
+            Portal informasi Desa Ture, Kecamatan Pemayung,
+            Kabupaten Batang Hari, Provinsi Jambi.
+            Menyajikan informasi kegiatan pemerintahan,
+            pembangunan dan pelayanan kepada masyarakat.
+        </p>
+    </section>
+
+    <h2 class="section-title">📰 Berita Terbaru</h2>
+
+    <section class="berita">
+
+        <article class="card">
+            <div class="foto">🏘️</div>
+            <div class="card-content">
+                <div class="tanggal">06 September 2026</div>
+                <h3>Kegiatan Pemerintahan Desa Ture</h3>
+                <p>
+                    Informasi terbaru mengenai kegiatan
+                    dan pelayanan Pemerintah Desa Ture.
+                </p>
+            </div>
+        </article>
+
+        <article class="card">
+            <div class="foto">🌾</div>
+            <div class="card-content">
+                <div class="tanggal">05 September 2026</div>
+                <h3>Ketahanan Pangan dan Pertanian Desa</h3>
+                <p>
+                    Berbagai kegiatan masyarakat dalam
+                    mendukung sektor pertanian Desa Ture.
+                </p>
+            </div>
+        </article>
+
+        <article class="card">
+            <div class="foto">🏗️</div>
+            <div class="card-content">
+                <div class="tanggal">04 September 2026</div>
+                <h3>Pembangunan dan Infrastruktur Desa</h3>
+                <p>
+                    Informasi perkembangan pembangunan
+                    dan infrastruktur di Desa Ture.
+                </p>
+            </div>
+        </article>
+
+    </section>
+
+    <section class="info">
+
+        <div class="box">
+            <h3>📢 Pengumuman Desa</h3>
+            <ul>
+                <li>Informasi pelayanan masyarakat</li>
+                <li>Jadwal kegiatan desa</li>
+                <li>Informasi penting untuk masyarakat</li>
+            </ul>
+        </div>
+
+        <div class="box">
+            <h3>📄 Transparansi Desa</h3>
+            <ul>
+                <li>APBDes Desa Ture</li>
+                <li>Realisasi anggaran</li>
+                <li>Informasi pembangunan desa</li>
+            </ul>
+        </div>
+
+    </section>
+
+</main>
+
+<footer>
+    <strong>DESA TURE</strong><br>
+    Kecamatan Pemayung, Kabupaten Batang Hari, Jambi<br>
+    Portal Informasi Desa
+</footer>
+
+</body>
+</html>
