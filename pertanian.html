@@ -3,169 +3,173 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Pertanian Desa Ture</title>
 
 <style>
-*{
-box-sizing:border-box;
-margin:0;
-padding:0;
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-body{
-font-family:Arial,sans-serif;
-background:#f4f6f8;
-color:#222;
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f6f8;
+    color: #333;
 }
 
-header{
-background:#087f3e;
-color:white;
+header {
+    background: #087f3e;
+    color: white;
 }
 
-.top{
-max-width:1100px;
-margin:auto;
-padding:20px;
-display:flex;
-align-items:center;
-gap:15px;
+.top {
+    max-width: 1100px;
+    margin: auto;
+    padding: 18px 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
 }
 
-.logo{
-width:60px;
-height:60px;
-background:white;
-border-radius:50%;
-display:flex;
-align-items:center;
-justify-content:center;
-overflow:hidden;
+.logo img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
 }
 
-.logo img{
-width:54px;
-height:54px;
-object-fit:contain;
+.judul h1 {
+    font-size: 28px;
 }
 
-.judul h1{
-font-size:28px;
+.judul p {
+    margin-top: 5px;
+    font-size: 14px;
 }
 
-.judul p{
-margin-top:5px;
-font-size:14px;
+nav {
+    background: #066b35;
 }
 
-nav{
-background:#066b35;
+.navbar {
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
 }
 
-.navbar{
-max-width:1100px;
-margin:auto;
-display:flex;
-flex-wrap:wrap;
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 14px 16px;
+    display: block;
+    font-size: 14px;
 }
 
-nav a{
-color:white;
-text-decoration:none;
-padding:14px 16px;
-display:block;
-font-size:14px;
+nav a:hover {
+    background: #05582c;
 }
 
-nav a:hover{
-background:#05582c;
+.container {
+    max-width: 1100px;
+    margin: 25px auto;
+    padding: 0 15px;
 }
 
-.container{
-max-width:1000px;
-margin:25px auto;
-padding:0 15px;
+.hero {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    border-left: 6px solid #087f3e;
+    margin-bottom: 20px;
 }
 
-.judul-halaman{
-background:white;
-padding:25px;
-border-left:6px solid #087f3e;
-border-radius:10px;
-margin-bottom:20px;
+.hero img {
+    width: 100%;
+    max-height: 500px;
+    object-fit: cover;
+    border-radius: 8px;
 }
 
-.judul-halaman h2{
-color:#087f3e;
-font-size:28px;
-margin-bottom:8px;
+.hero h2 {
+    color: #087f3e;
+    font-size: 27px;
+    margin: 18px 0 8px;
 }
 
-.judul-halaman p{
-color:#666;
-line-height:1.6;
+.hero p {
+    color: #666;
+    line-height: 1.6;
 }
 
-.pertanian{
-background:white;
-padding:22px;
-border-radius:10px;
-margin-bottom:18px;
-box-shadow:0 2px 8px rgba(0,0,0,.08);
+.card {
+    background: white;
+    padding: 22px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,.08);
 }
 
-.pertanian h3{
-color:#087f3e;
-font-size:20px;
-margin-bottom:10px;
+.card h3 {
+    color: #087f3e;
+    margin-bottom: 12px;
 }
 
-.pertanian p{
-color:#555;
-line-height:1.7;
-margin-bottom:8px;
+.card p {
+    color: #555;
+    line-height: 1.7;
 }
 
-.kembali{
-display:inline-block;
-margin-top:5px;
-background:#087f3e;
-color:white;
-padding:10px 16px;
-border-radius:6px;
-text-decoration:none;
+.data {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-top: 15px;
 }
 
-footer{
-margin-top:40px;
-background:#07552d;
-color:white;
-text-align:center;
-padding:25px 15px;
-line-height:1.7;
+.data-box {
+    background: #f4f6f8;
+    padding: 16px;
+    border-radius: 8px;
 }
 
-@media(max-width:750px){
-
-.judul h1{
-font-size:22px;
+.data-box strong {
+    display: block;
+    color: #087f3e;
+    margin-bottom: 5px;
 }
 
-.navbar{
-display:grid;
-grid-template-columns:repeat(2,1fr);
+footer {
+    margin-top: 40px;
+    background: #07552d;
+    color: white;
+    text-align: center;
+    padding: 25px 15px;
+    line-height: 1.7;
 }
 
-nav a{
-text-align:center;
-border-bottom:1px solid rgba(255,255,255,.1);
-}
+@media (max-width: 750px) {
+    .judul h1 {
+        font-size: 22px;
+    }
 
-.judul-halaman h2{
-font-size:24px;
-}
+    .navbar {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
 
+    nav a {
+        text-align: center;
+        border-bottom: 1px solid rgba(255,255,255,.1);
+    }
+
+    .data {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h2 {
+        font-size: 23px;
+    }
 }
 </style>
 </head>
@@ -188,7 +192,6 @@ font-size:24px;
 </div>
 
 <nav>
-
 <div class="navbar">
 
 <a href="index.html">Beranda</a>
@@ -197,70 +200,78 @@ font-size:24px;
 <a href="pengumuman.html">Pengumuman</a>
 <a href="pembangunan.html">Pembangunan</a>
 <a href="pertanian.html">Pertanian</a>
-<a href="#">Galeri</a>
-<a href="#">Kontak</a>
+<a href="galeri.html">Galeri</a>
+<a href="kontak.html">Kontak</a>
 
 </div>
-
 </nav>
 
 </header>
 
 <main class="container">
 
-<section class="judul-halaman">
+<section class="hero">
 
-<h2>Pertanian Desa Ture</h2>
+<img src="IMG_20260326_104810.jpg" alt="Pertanian Desa Ture">
+
+<h2>🌾 Pertanian Desa Ture</h2>
 
 <p>
-Informasi mengenai potensi pertanian, kegiatan petani dan ketahanan pangan di Desa Ture.
+Sektor pertanian merupakan salah satu potensi utama masyarakat Desa Ture.
+Berbagai kegiatan pertanian terus dikembangkan untuk mendukung ketahanan
+pangan dan meningkatkan kesejahteraan masyarakat desa.
 </p>
 
 </section>
 
-<article class="pertanian">
+<section class="card">
 
-<h3>🌾 Potensi Pertanian Desa Ture</h3>
-
-<p>
-Pertanian merupakan salah satu sektor penting dalam kehidupan masyarakat Desa Ture. Lahan pertanian menjadi sumber penghidupan sekaligus bagian penting dalam mendukung perekonomian masyarakat desa.
-</p>
-
-</article>
-
-<article class="pertanian">
-
-<h3>🚜 Kegiatan Kelompok Tani</h3>
+<h3>🌱 Potensi Pertanian</h3>
 
 <p>
-Berbagai kegiatan kelompok tani dilaksanakan untuk meningkatkan produktivitas pertanian, mulai dari pengolahan lahan, penanaman, pemeliharaan tanaman hingga panen.
+Desa Ture memiliki potensi pertanian yang cukup besar, khususnya pada
+sektor tanaman pangan. Aktivitas masyarakat dalam mengelola lahan pertanian
+menjadi bagian penting dalam mendukung perekonomian desa.
 </p>
 
-</article>
+</section>
 
-<article class="pertanian">
+<section class="card">
 
-<h3>🌱 Ketahanan Pangan Desa</h3>
+<h3>🚜 Kegiatan Pertanian</h3>
 
 <p>
-Desa Ture terus mendorong kegiatan pertanian dan ketahanan pangan sebagai bagian dari upaya meningkatkan ketersediaan pangan serta kesejahteraan masyarakat.
+Berbagai kegiatan pertanian masyarakat meliputi pengolahan lahan,
+penanaman, pemeliharaan tanaman, hingga panen. Penggunaan alat dan mesin
+pertanian juga membantu meningkatkan efisiensi kegiatan di lapangan.
 </p>
 
-</article>
+</section>
 
-<article class="pertanian">
+<section class="card">
 
-<h3>💧 Pengelolaan Lahan Pertanian</h3>
+<h3>📋 Informasi Pertanian Desa</h3>
 
-<p>
-Pengelolaan lahan dan sarana pendukung pertanian menjadi bagian penting untuk membantu masyarakat meningkatkan hasil produksi dan menjaga keberlanjutan kegiatan pertanian desa.
-</p>
+<div class="data">
 
-</article>
+<div class="data-box">
+<strong>Komoditas</strong>
+Tanaman Pangan
+</div>
 
-<a class="kembali" href="index.html">
-← Kembali ke Beranda
-</a>
+<div class="data-box">
+<strong>Kegiatan</strong>
+Budidaya dan Panen
+</div>
+
+<div class="data-box">
+<strong>Wilayah</strong>
+Desa Ture
+</div>
+
+</div>
+
+</section>
 
 </main>
 
