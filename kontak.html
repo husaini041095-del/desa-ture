@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kontak Desa Ture</title>
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+
+body{
+font-family:Arial,sans-serif;
+background:#f4f6f8;
+color:#222;
+}
+
+header{
+background:#087f3e;
+color:white;
+}
+
+.top{
+max-width:1100px;
+margin:auto;
+padding:20px;
+display:flex;
+align-items:center;
+gap:15px;
+}
+
+.logo{
+width:60px;
+height:60px;
+background:white;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+overflow:hidden;
+}
+
+.logo img{
+width:54px;
+height:54px;
+object-fit:contain;
+}
+
+.judul h1{font-size:28px}
+.judul p{margin-top:5px;font-size:14px}
+
+nav{background:#066b35}
+
+.navbar{
+max-width:1100px;
+margin:auto;
+display:flex;
+flex-wrap:wrap;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+padding:14px 16px;
+display:block;
+font-size:14px;
+}
+
+nav a:hover{background:#05582c}
+
+.container{
+max-width:1000px;
+margin:25px auto;
+padding:0 15px;
+}
+
+.judul-halaman{
+background:white;
+padding:25px;
+border-left:6px solid #087f3e;
+border-radius:10px;
+margin-bottom:20px;
+}
+
+.judul-halaman h2{
+color:#087f3e;
+font-size:28px;
+margin-bottom:8px;
+}
+
+.judul-halaman p{
+color:#666;
+line-height:1.6;
+}
+
+.kontak{
+background:white;
+padding:22px;
+border-radius:10px;
+margin-bottom:18px;
+box-shadow:0 2px 8px rgba(0,0,0,.08);
+}
+
+.kontak h3{
+color:#087f3e;
+font-size:20px;
+margin-bottom:12px;
+}
+
+.kontak p{
+color:#555;
+line-height:1.7;
+margin-bottom:8px;
+}
+
+.info-kontak{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:15px;
+}
+
+.item{
+border:1px solid #ddd;
+border-radius:8px;
+padding:15px;
+}
+
+.item strong{
+display:block;
+color:#087f3e;
+margin-bottom:6px;
+}
+
+.kembali{
+display:inline-block;
+margin-top:5px;
+background:#087f3e;
+color:white;
+padding:10px 16px;
+border-radius:6px;
+text-decoration:none;
+}
+
+footer{
+margin-top:40px;
+background:#07552d;
+color:white;
+text-align:center;
+padding:25px 15px;
+line-height:1.7;
+}
+
+@media(max-width:750px){
+
+.judul h1{font-size:22px}
+
+.navbar{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+}
+
+nav a{text-align:center}
+
+.info-kontak{
+grid-template-columns:1fr;
+}
+
+.judul-halaman h2{
+font-size:24px;
+}
+
+}
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div class="top">
+
+<div class="logo">
+<img src="Logo-desa-ture.png" alt="Logo Desa Ture">
+</div>
+
+<div class="judul">
+<h1>DESA TURE</h1>
+<p>Portal Informasi Desa Ture</p>
+</div>
+
+</div>
+
+<nav>
+<div class="navbar">
+
+<a href="index.html">Beranda</a>
+<a href="berita-pemerintahan.html">Berita Desa</a>
+<a href="pemerintahan.html">Pemerintahan</a>
+<a href="pengumuman.html">Pengumuman</a>
+<a href="pembangunan.html">Pembangunan</a>
+<a href="pertanian.html">Pertanian</a>
+<a href="galeri.html">Galeri</a>
+<a href="kontak.html">Kontak</a>
+
+</div>
+</nav>
+
+</header>
+
+<main class="container">
+
+<section class="judul-halaman">
+
+<h2>Kontak Desa Ture</h2>
+
+<p>
+Informasi kontak dan alamat Desa Ture untuk memudahkan masyarakat memperoleh informasi dan pelayanan.
+</p>
+
+</section>
+
+<section class="kontak">
+
+<h3>🏛️ Kantor Desa Ture</h3>
+
+<div class="info-kontak">
+
+<div class="item">
+<strong>📍 Alamat</strong>
+<p>Desa Ture, Kecamatan Pemayung, Kabupaten Batang Hari, Jambi</p>
+</div>
+
+<div class="item">
+<strong>🏢 Pemerintahan</strong>
+<p>Pemerintah Desa Ture</p>
+</div>
+
+<div class="item">
+<strong>📞 Telepon</strong>
+<p>Informasi kontak akan diperbarui</p>
+</div>
+
+<div class="item">
+<strong>✉️ Email</strong>
+<p>Informasi email akan diperbarui</p>
+</div>
+
+</div>
+
+</section>
+
+<section class="kontak">
+
+<h3>📢 Informasi Pelayanan</h3>
+
+<p>
+Untuk memperoleh informasi mengenai pelayanan administrasi dan kegiatan desa, masyarakat dapat menghubungi atau datang langsung ke Kantor Desa Ture.
+</p>
+
+</section>
+
+<a class="kembali" href="index.html">
+← Kembali ke Beranda
+</a>
+
+</main>
+
+<footer>
+
+<strong>DESA TURE</strong><br>
+Kecamatan Pemayung, Kabupaten Batang Hari, Jambi<br>
+Portal Informasi Desa
+
+</footer>
+
+</body>
+</html>
