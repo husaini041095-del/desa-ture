@@ -6,182 +6,158 @@
 <title>Pembangunan Desa Ture</title>
 
 <style>
-*{
-box-sizing:border-box;
-margin:0;
-padding:0;
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-body{
-font-family:Arial,sans-serif;
-background:#f4f6f8;
-color:#222;
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f6f8;
+    color: #333;
 }
 
-header{
-background:#087f3e;
-color:white;
+header {
+    background: #087f3e;
+    color: white;
 }
 
-.top{
-max-width:1100px;
-margin:auto;
-padding:20px;
-display:flex;
-align-items:center;
-gap:15px;
+.top {
+    max-width: 1100px;
+    margin: auto;
+    padding: 18px 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
 }
 
-.logo{
-width:60px;
-height:60px;
-background:white;
-border-radius:50%;
-display:flex;
-align-items:center;
-justify-content:center;
-overflow:hidden;
+.logo img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
 }
 
-.logo img{
-width:54px;
-height:54px;
-object-fit:contain;
+.judul h1 {
+    font-size: 28px;
 }
 
-.judul h1{
-font-size:28px;
+.judul p {
+    margin-top: 5px;
+    font-size: 14px;
 }
 
-.judul p{
-margin-top:5px;
-font-size:14px;
+nav {
+    background: #066b35;
 }
 
-nav{
-background:#066b35;
+.navbar {
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
 }
 
-.navbar{
-max-width:1100px;
-margin:auto;
-display:flex;
-flex-wrap:wrap;
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 14px 16px;
+    display: block;
+    font-size: 14px;
 }
 
-nav a{
-color:white;
-text-decoration:none;
-padding:14px 16px;
-display:block;
-font-size:14px;
+nav a:hover {
+    background: #05582c;
 }
 
-nav a:hover{
-background:#05582c;
+.container {
+    max-width: 1100px;
+    margin: 25px auto;
+    padding: 0 15px;
 }
 
-.container{
-max-width:1000px;
-margin:25px auto;
-padding:0 15px;
+.judul-halaman {
+    background: white;
+    padding: 25px;
+    border-left: 6px solid #087f3e;
+    border-radius: 10px;
+    margin-bottom: 20px;
 }
 
-.judul-halaman{
-background:white;
-padding:25px;
-border-left:6px solid #087f3e;
-border-radius:10px;
-margin-bottom:20px;
+.judul-halaman h2 {
+    color: #087f3e;
+    margin-bottom: 8px;
 }
 
-.judul-halaman h2{
-color:#087f3e;
-font-size:28px;
-margin-bottom:8px;
+.judul-halaman p {
+    color: #666;
+    line-height: 1.6;
 }
 
-.judul-halaman p{
-color:#666;
-line-height:1.6;
+.card {
+    background: white;
+    border-radius: 10px;
+    padding: 22px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,.08);
 }
 
-.proyek{
-background:white;
-padding:22px;
-border-radius:10px;
-margin-bottom:18px;
-box-shadow:0 2px 8px rgba(0,0,0,.08);
+.card h3 {
+    color: #087f3e;
+    margin-bottom: 12px;
 }
 
-.proyek h3{
-color:#087f3e;
-font-size:20px;
-margin-bottom:10px;
+.card p {
+    line-height: 1.7;
+    color: #555;
 }
 
-.tanggal{
-font-size:13px;
-color:#777;
-margin-bottom:12px;
+.data {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-top: 15px;
 }
 
-.proyek p{
-color:#555;
-line-height:1.7;
-margin-bottom:8px;
+.data-box {
+    background: #f4f6f8;
+    padding: 15px;
+    border-radius: 8px;
 }
 
-.status{
-display:inline-block;
-margin-top:5px;
-padding:6px 10px;
-background:#e8f5ed;
-color:#087f3e;
-border-radius:5px;
-font-size:13px;
-font-weight:bold;
+.data-box strong {
+    display: block;
+    color: #087f3e;
+    margin-bottom: 5px;
 }
 
-.kembali{
-display:inline-block;
-margin-top:5px;
-background:#087f3e;
-color:white;
-padding:10px 16px;
-border-radius:6px;
-text-decoration:none;
+footer {
+    margin-top: 40px;
+    background: #07552d;
+    color: white;
+    text-align: center;
+    padding: 25px 15px;
+    line-height: 1.7;
 }
 
-footer{
-margin-top:40px;
-background:#07552d;
-color:white;
-text-align:center;
-padding:25px 15px;
-line-height:1.7;
-}
+@media (max-width: 750px) {
+    .judul h1 {
+        font-size: 22px;
+    }
 
-@media(max-width:750px){
+    .navbar {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
 
-.judul h1{
-font-size:22px;
-}
+    nav a {
+        text-align: center;
+        border-bottom: 1px solid rgba(255,255,255,.1);
+    }
 
-.navbar{
-display:grid;
-grid-template-columns:repeat(2,1fr);
-}
-
-nav a{
-text-align:center;
-border-bottom:1px solid rgba(255,255,255,.1);
-}
-
-.judul-halaman h2{
-font-size:24px;
-}
-
+    .data {
+        grid-template-columns: 1fr;
+    }
 }
 </style>
 </head>
@@ -204,7 +180,6 @@ font-size:24px;
 </div>
 
 <nav>
-
 <div class="navbar">
 
 <a href="index.html">Beranda</a>
@@ -212,12 +187,11 @@ font-size:24px;
 <a href="pemerintahan.html">Pemerintahan</a>
 <a href="pengumuman.html">Pengumuman</a>
 <a href="pembangunan.html">Pembangunan</a>
-<a href="#">Pertanian</a>
-<a href="#">Galeri</a>
-<a href="#">Kontak</a>
+<a href="pertanian.html">Pertanian</a>
+<a href="galeri.html">Galeri</a>
+<a href="kontak.html">Kontak</a>
 
 </div>
-
 </nav>
 
 </header>
@@ -229,68 +203,75 @@ font-size:24px;
 <h2>Pembangunan Desa Ture</h2>
 
 <p>
-Informasi mengenai kegiatan pembangunan dan infrastruktur yang dilaksanakan di Desa Ture untuk mendukung kebutuhan dan kesejahteraan masyarakat.
+Informasi mengenai pembangunan dan infrastruktur yang dilaksanakan
+di Desa Ture sebagai bagian dari upaya meningkatkan pelayanan dan
+kesejahteraan masyarakat.
 </p>
 
 </section>
 
-<article class="proyek">
+<section class="card">
 
-<h3>🏗️ Pembangunan Infrastruktur Desa</h3>
-
-<div class="tanggal">
-Informasi pembangunan Desa Ture
-</div>
+<h3>🏗️ Pembangunan dan Infrastruktur</h3>
 
 <p>
-Pembangunan infrastruktur merupakan salah satu upaya Desa Ture dalam meningkatkan akses dan mendukung aktivitas masyarakat.
+Pemerintah Desa Ture bersama masyarakat terus mendorong pembangunan
+infrastruktur desa yang bermanfaat dan dapat mendukung aktivitas
+masyarakat.
 </p>
 
-<span class="status">
-Informasi akan diperbarui
-</span>
+</section>
 
-</article>
+<section class="card">
 
-<article class="proyek">
+<h3>📋 Data Pembangunan Desa</h3>
 
-<h3>🛣️ Pembangunan dan Perbaikan Jalan</h3>
+<div class="data">
 
-<div class="tanggal">
-Informasi kegiatan
+<div class="data-box">
+<strong>Nama Kegiatan</strong>
+Akan diperbarui
 </div>
 
-<p>
-Kegiatan pembangunan dan perbaikan jalan desa dilaksanakan untuk meningkatkan akses masyarakat serta mendukung kegiatan ekonomi dan sosial.
-</p>
-
-<span class="status">
-Informasi akan diperbarui
-</span>
-
-</article>
-
-<article class="proyek">
-
-<h3>💧 Infrastruktur Air dan Sanitasi</h3>
-
-<div class="tanggal">
-Informasi kegiatan
+<div class="data-box">
+<strong>Lokasi</strong>
+Desa Ture
 </div>
 
+<div class="data-box">
+<strong>Tahun Anggaran</strong>
+2026
+</div>
+
+<div class="data-box">
+<strong>Sumber Dana</strong>
+Akan diperbarui
+</div>
+
+<div class="data-box">
+<strong>Nilai Anggaran</strong>
+Akan diperbarui
+</div>
+
+<div class="data-box">
+<strong>Status</strong>
+Akan diperbarui
+</div>
+
+</div>
+
+</section>
+
+<section class="card">
+
+<h3>📸 Dokumentasi Pembangunan</h3>
+
 <p>
-Pembangunan sarana air dan sanitasi menjadi bagian dari upaya meningkatkan fasilitas dasar dan kualitas lingkungan masyarakat Desa Ture.
+Dokumentasi kegiatan pembangunan Desa Ture akan ditampilkan
+pada halaman ini.
 </p>
 
-<span class="status">
-Informasi akan diperbarui
-</span>
-
-</article>
-
-<a class="kembali" href="index.html">
-← Kembali ke Beranda
-</a>
+</section>
 
 </main>
 
