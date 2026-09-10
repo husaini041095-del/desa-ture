@@ -1,279 +1,234 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Galeri Desa Ture</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeri Desa Ture</title>
 
-<style>
-*{box-sizing:border-box;margin:0;padding:0}
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f5f7f5;
+            color: #333;
+        }
 
-body{
-font-family:Arial,sans-serif;
-background:#f4f6f8;
-color:#222;
-}
+        header {
+            background: #198754;
+            color: white;
+            padding: 15px 20px;
+        }
 
-header{background:#087f3e;color:white}
+        .header-content {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
 
-.top{
-max-width:1100px;
-margin:auto;
-padding:20px;
-display:flex;
-align-items:center;
-gap:15px;
-}
+        .logo img {
+            width: 54px;
+            height: 54px;
+            object-fit: contain;
+        }
 
-.logo{
-width:60px;
-height:60px;
-background:white;
-border-radius:50%;
-display:flex;
-align-items:center;
-justify-content:center;
-overflow:hidden;
-}
+        .header-text h1 {
+            margin: 0;
+            font-size: 24px;
+        }
 
-.logo img{
-width:54px;
-height:54px;
-object-fit:contain;
-}
+        .header-text p {
+            margin: 4px 0 0;
+            font-size: 14px;
+        }
 
-.judul h1{font-size:28px}
-.judul p{margin-top:5px;font-size:14px}
+        nav {
+            margin-top: 15px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
 
-nav{background:#066b35}
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 12px;
+            border-radius: 6px;
+            background: rgba(255,255,255,0.15);
+            font-size: 14px;
+        }
 
-.navbar{
-max-width:1100px;
-margin:auto;
-display:flex;
-flex-wrap:wrap;
-}
+        nav a:hover {
+            background: rgba(255,255,255,0.3);
+        }
 
-nav a{
-color:white;
-text-decoration:none;
-padding:14px 16px;
-display:block;
-font-size:14px;
-}
+        .container {
+            max-width: 1100px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
 
-nav a:hover{background:#05582c}
+        .title {
+            text-align: center;
+            margin-bottom: 30px;
+        }
 
-.container{
-max-width:1000px;
-margin:25px auto;
-padding:0 15px;
-}
+        .title h2 {
+            color: #198754;
+            margin-bottom: 8px;
+        }
 
-.judul-halaman{
-background:white;
-padding:25px;
-border-left:6px solid #087f3e;
-border-radius:10px;
-margin-bottom:20px;
-}
+        .title p {
+            color: #666;
+        }
 
-.judul-halaman h2{
-color:#087f3e;
-font-size:28px;
-margin-bottom:8px;
-}
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
 
-.judul-halaman p{
-color:#666;
-line-height:1.6;
-}
+        .gallery-item {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+        }
 
-.galeri{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:18px;
-}
+        .gallery-item img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            display: block;
+        }
 
-.foto{
-background:white;
-border-radius:10px;
-overflow:hidden;
-box-shadow:0 2px 8px rgba(0,0,0,.08);
-}
+        .gallery-item .caption {
+            padding: 15px;
+        }
 
-.placeholder{
-height:190px;
-background:#e8ecef;
-display:flex;
-align-items:center;
-justify-content:center;
-font-size:45px;
-}
+        .gallery-item h3 {
+            margin: 0 0 6px;
+            color: #198754;
+            font-size: 18px;
+        }
 
-.keterangan{
-padding:15px;
-}
+        .gallery-item p {
+            margin: 0;
+            color: #666;
+            font-size: 14px;
+        }
 
-.keterangan h3{
-color:#087f3e;
-font-size:17px;
-margin-bottom:6px;
-}
-
-.keterangan p{
-font-size:13px;
-color:#666;
-line-height:1.5;
-}
-
-.kembali{
-display:inline-block;
-margin-top:25px;
-background:#087f3e;
-color:white;
-padding:10px 16px;
-border-radius:6px;
-text-decoration:none;
-}
-
-footer{
-margin-top:40px;
-background:#07552d;
-color:white;
-text-align:center;
-padding:25px 15px;
-line-height:1.7;
-}
-
-@media(max-width:750px){
-.judul h1{font-size:22px}
-
-.navbar{
-display:grid;
-grid-template-columns:repeat(2,1fr);
-}
-
-nav a{text-align:center}
-
-.galeri{
-grid-template-columns:1fr;
-}
-
-}
-</style>
+        footer {
+            margin-top: 40px;
+            background: #198754;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 14px;
+        }
+    </style>
 </head>
 
 <body>
 
 <header>
+    <div class="header-content">
 
-<div class="top">
+        <div class="logo">
+            <img src="Logo-desa-ture.png" alt="Logo Desa Ture">
+        </div>
 
-<div class="logo">
-<img src="Logo-desa-ture.png" alt="Logo Desa Ture">
-</div>
+        <div class="header-text">
+            <h1>Desa Ture</h1>
+            <p>Kecamatan Pemayung, Kabupaten Batang Hari, Jambi</p>
+        </div>
 
-<div class="judul">
-<h1>DESA TURE</h1>
-<p>Portal Informasi Desa Ture</p>
-</div>
+    </div>
 
-</div>
-
-<nav>
-<div class="navbar">
-
-<a href="index.html">Beranda</a>
-<a href="berita-pemerintahan.html">Berita Desa</a>
-<a href="pemerintahan.html">Pemerintahan</a>
-<a href="pengumuman.html">Pengumuman</a>
-<a href="pembangunan.html">Pembangunan</a>
-<a href="pertanian.html">Pertanian</a>
-<a href="galeri.html">Galeri</a>
-<a href="#">Kontak</a>
-
-</div>
-</nav>
-
+    <nav>
+        <a href="index.html">Beranda</a>
+        <a href="berita-pemerintahan.html">Berita Desa</a>
+        <a href="pemerintahan.html">Pemerintahan</a>
+        <a href="pengumuman.html">Pengumuman</a>
+        <a href="pembangunan.html">Pembangunan</a>
+        <a href="pertanian.html">Pertanian</a>
+        <a href="galeri.html">Galeri</a>
+        <a href="kontak.html">Kontak</a>
+    </nav>
 </header>
 
-<main class="container">
+<div class="container">
 
-<section class="judul-halaman">
+    <div class="title">
+        <h2>📸 Galeri Desa Ture</h2>
+        <p>Dokumentasi kegiatan dan potensi Desa Ture</p>
+    </div>
 
-<h2>Galeri Desa Ture</h2>
+    <div class="gallery">
 
-<p>
-Dokumentasi kegiatan pemerintahan, pembangunan, pertanian dan kegiatan masyarakat Desa Ture.
-</p>
+        <div class="gallery-item">
+            <img src="IMG_20260326_104810.jpg" alt="Pertanian Desa Ture">
+            <div class="caption">
+                <h3>🌾 Pertanian Desa Ture</h3>
+                <p>Dokumentasi kegiatan pertanian dan persawahan Desa Ture.</p>
+            </div>
+        </div>
 
-</section>
+        <div class="gallery-item">
+            <div style="height:220px; display:flex; align-items:center; justify-content:center; background:#e9f5ee; font-size:60px;">
+                🏢
+            </div>
+            <div class="caption">
+                <h3>🏢 Kantor Desa</h3>
+                <p>Dokumentasi Kantor Desa Ture.</p>
+            </div>
+        </div>
 
-<section class="galeri">
+        <div class="gallery-item">
+            <div style="height:220px; display:flex; align-items:center; justify-content:center; background:#e9f5ee; font-size:60px;">
+                👥
+            </div>
+            <div class="caption">
+                <h3>👥 Kegiatan Masyarakat</h3>
+                <p>Dokumentasi kegiatan masyarakat Desa Ture.</p>
+            </div>
+        </div>
 
-<div class="foto">
-<div class="placeholder">🏘️</div>
-<div class="keterangan">
-<h3>Kegiatan Desa</h3>
-<p>Dokumentasi kegiatan Desa Ture.</p>
+        <div class="gallery-item">
+            <div style="height:220px; display:flex; align-items:center; justify-content:center; background:#e9f5ee; font-size:60px;">
+                🏗️
+            </div>
+            <div class="caption">
+                <h3>🏗️ Pembangunan Desa</h3>
+                <p>Dokumentasi pembangunan dan infrastruktur desa.</p>
+            </div>
+        </div>
+
+        <div class="gallery-item">
+            <div style="height:220px; display:flex; align-items:center; justify-content:center; background:#e9f5ee; font-size:60px;">
+                🏛️
+            </div>
+            <div class="caption">
+                <h3>🏛️ Pemerintahan</h3>
+                <p>Dokumentasi kegiatan pemerintahan Desa Ture.</p>
+            </div>
+        </div>
+
+        <div class="gallery-item">
+            <div style="height:220px; display:flex; align-items:center; justify-content:center; background:#e9f5ee; font-size:60px;">
+                🤝
+            </div>
+            <div class="caption">
+                <h3>🤝 Kegiatan Sosial</h3>
+                <p>Dokumentasi kegiatan sosial dan kemasyarakatan.</p>
+            </div>
+        </div>
+
+    </div>
+
 </div>
-</div>
-
-<div class="foto">
-<div class="placeholder">🏗️</div>
-<div class="keterangan">
-<h3>Pembangunan Desa</h3>
-<p>Dokumentasi pembangunan dan infrastruktur desa.</p>
-</div>
-</div>
-
-<div class="foto">
-<div class="placeholder">🌾</div>
-<div class="keterangan">
-<h3>Pertanian</h3>
-<p>Dokumentasi kegiatan pertanian masyarakat Desa Ture.</p>
-</div>
-</div>
-
-<div class="foto">
-<div class="placeholder">👥</div>
-<div class="keterangan">
-<h3>Kegiatan Masyarakat</h3>
-<p>Dokumentasi kegiatan masyarakat Desa Ture.</p>
-</div>
-</div>
-
-<div class="foto">
-<div class="placeholder">📢</div>
-<div class="keterangan">
-<h3>Kegiatan Pemerintahan</h3>
-<p>Dokumentasi kegiatan pemerintahan desa.</p>
-</div>
-</div>
-
-<div class="foto">
-<div class="placeholder">🤝</div>
-<div class="keterangan">
-<h3>Kegiatan Sosial</h3>
-<p>Dokumentasi kegiatan sosial dan kemasyarakatan.</p>
-</div>
-</div>
-
-</section>
-
-<a class="kembali" href="index.html">
-← Kembali ke Beranda
-</a>
-
-</main>
 
 <footer>
-
-<strong>DESA TURE</strong><br>
-Kecamatan Pemayung, Kabupaten Batang Hari, Jambi<br>
-Portal Informasi Desa
-
+    © 2026 Desa Ture — Kecamatan Pemayung, Kabupaten Batang Hari
 </footer>
 
 </body>
